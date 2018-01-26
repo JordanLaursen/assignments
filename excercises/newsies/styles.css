@@ -1,0 +1,40 @@
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/**************************************/
+
+.hrSize {
+    width: 90%;
+}
+
+.hrSize2 {
+    width: 40%;
+}
+
+.rows {
+    display: inline-block;
+    /*background-color: #efefef;*/
+    width: 30%;
+    /*justify-content: */
+    margin: 20px -1px;
+    /*padding: -5px;*/
+    border: 3px solid white;
+    /*height: 330px;*/
+}
+
+.leftMarg {
+    margin-left: 4%;
+}
+
+.rightMarg {
+    margin-right: 4%;
+}

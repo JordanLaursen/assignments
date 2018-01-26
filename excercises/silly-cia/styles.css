@@ -1,0 +1,40 @@
+h1 {
+   color: green;
+}
+
+body {
+   margin: 25px 15%;
+}
+
+p {
+   line-height: 25px;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   display: inline-block;
+}
+
+#hover:hover {
+   text-decoration: underline;
+}
+
+.fonts{
+   font-family: georgia;
+   text-align: center;
+}
+
+.refer {
+   text-transform: uppercase;
+}
+
+.left-bound {
+   float: left;
+}
+
+.sides-img {
+   margin-right: 30px;
+}
