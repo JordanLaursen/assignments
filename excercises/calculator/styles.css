@@ -1,0 +1,30 @@
+
+
+h1 {
+    text-align: center;
+}
+
+
+#add {
+    background-color: #1FFFDD;
+}
+
+#subtract {
+    background-color: #CCA1CC;
+}
+
+#multiply {
+    background-color: #B202B2;
+}
+
+.spacing {
+    text-align: center;
+    margin: -10px 20%;
+}
+
+
+@media(max-width: 600px) {
+    .spacing {
+        margin: -10px 20px;
+    }
+}

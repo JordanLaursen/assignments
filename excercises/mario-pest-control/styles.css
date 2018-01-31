@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    margin: 10px 38%;
+}
+
+.inputWidth {
+    width: 240px;
+}
+
+.buttonMargin {
+    margin-top: 20px;
+}
