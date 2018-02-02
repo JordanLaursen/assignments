@@ -1,16 +1,107 @@
 h1 {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: #FF594F;
     text-align: center;
 }
 
 div {
-    text-align: center;
+    /*text-align: center;
     margin: 10px 38%;
+    display: inline-block;*/
+    /*height: 330px;*/
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    text-align: center;
+}
+
+body {
+   background-image: url("https://www.desktopbackground.org/t/2011/08/21/253470_super-mario-maker-backgrounds-pack-super-mario-bros-x-forums_1024x1024_h.gif");
+   background-color: #FF594F;
+}
+
+.h1Top {
+}
+
+.divForCaught {
+    margin: 10px 14.9%;
+}
+
+.divDivide {
+    display: inline-block;
+}
+
+.divDivideResults {
+    /*display: inline-block;*/
+    margin: 10px 15%;
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: #FF594F;
+    /*width: 330px;
+    height: 332px;*/
+    text-align: center;
+}
+
+.divDivideInfo {
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: #FF594F;
+    text-align: center;
+    display: inline-block;
+    width: 324.9px;
+    /*margin: 10px 14.9%*/
+    margin-left: 3px;
+}
+
+.divDivideInfo1 {
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: #FF594F;
+    text-align: center;
+    display: inline-block;
+    width: 324.9px;
+    margin-left: 15%
 }
 
 .inputWidth {
     width: 240px;
+    text-align: center;
+    margin-left: 25px;
 }
 
 .buttonMargin {
     margin-top: 20px;
+}
+
+.bobOmbImg {
+    width: 308px;
+    margin-right: -20px;
+}
+
+.cheepCheepImg {
+    width: 253px;
+    margin-left: 25px;
+}
+
+.goombaImg {
+    width: 206px;
+    margin-left: 50px;
+}
+
+.field {
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    background-color: #FF594F;
+    border: 1px solid black;
+    border-radius: 5px;
 }

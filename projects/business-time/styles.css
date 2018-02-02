@@ -1,0 +1,66 @@
+
+
+h1 {
+    /* display: flex; */
+    text-align: center;
+    /* justify-content: center; */
+    font-size: 60px;
+
+}
+
+header {
+    display: flex;
+    background-color: #696969;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header h3 {
+    color: white;
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 5%;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+}
+
+body {
+    background-image: url(https://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg);
+    color: white;
+    background-color: black;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Alike', sans-serif;
+    font-size: 19px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    margin-left: -35px;
+}

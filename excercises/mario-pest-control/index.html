@@ -11,23 +11,61 @@
 
     <h1>Mario Pest Control Services</h1>
     <div>
-        <form name="mario">
-            <fieldset>
-                <legend>Goombas</legend>
-                <input class="inputWidth" type="text" placeholder="Goombas Caught" name="goombas" value="">
-            </fieldset><br>
-            <fieldset>
-                <legend>Bob-Ombs</legend>
-                <input class="inputWidth" type="text" placeholder="Bob-Ombs Caught" name="bobOmbs" value="">
-            </fieldset><br>
-            <fieldset>
-                <legend>Cheep-cheeps</legend>
-                <input class="inputWidth" type="text" placeholder="Cheep-Cheeps Caught" name="cheepCheeps" value="">
-            </fieldset>
-            <button class="buttonMargin">Submit</button>
-        </form>
+   <!-- Gumba
+        Bob-Omb
+        Cheep-Cheep -->
+        <div class="divDivideInfo1">
+            <p>Gumbas. Price: 5 coins.</p>
+        </div>
+        <div class="divDivideInfo">
+            <p>Bob-Ombs. Price: 7 coins.</p>
+        </div>
+        <div class="divDivideInfo">
+            <p>Cheep-Cheeps. Price: 11 coins.</p>
+        </div>
     </div>
-
+    <div class="divForCaught">
+        <div class="divDivide">
+            <form name="mario">
+                <fieldset class="field">
+                    <!-- <legend>Goombas</legend> -->
+                    <img class="goombaImg" src="https://www.mariowiki.com/images/thumb/9/9c/Goomba_-_MarioPartyStarRush.png/200px-Goomba_-_MarioPartyStarRush.png" alt="Mario Goomba character">
+                    <input class="inputWidth" type="text" placeholder="Goombas Caught" name="goombas" value="">
+                </fieldset><br>
+            </form>
+        </div>
+        <div class="divDivide">
+            <form name="mario2">
+                <fieldset class="field">
+                    <!-- <legend>Bob-Ombs</legend> -->
+                    <img class="bobOmbImg" src="https://steamuserimages-a.akamaihd.net/ugc/545262489215072287/2C966CBE60BA5A852B97E2EFCA216433925879F2/" alt="Mario Bob-omb character">
+                    <input class="inputWidth" type="text" placeholder="Bob-Ombs Caught" name="bobOmbs" value="">
+                </fieldset><br>
+            </form>
+        </div>
+        <div class="divDivide">
+            <form name="mario3">
+                <fieldset class="field">
+                    <!-- <legend>Cheep-cheeps</legend> -->
+                    <img class="cheepCheepImg" src="https://vignette.wikia.nocookie.net/fantendo/images/3/35/Boss_Bass_3D_Art.png/revision/latest?cb=20130116005957" alt="Cheep Cheep image from mario">
+                    <input class="inputWidth" type="text" placeholder="Cheep-Cheeps Caught" name="cheepCheeps" value="">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="divDivideResults">
+        <button class="buttonMargin" id="button">Submit</button>
+        <p id="caughtResult">Total pests removed: </p>
+        <p id="costResult">Total cost of pest removal: </p>
+    </div>
+    <footer class="divDivideResults">
+        <p>Contact us:</p>
+        <ul>
+            <li>Website: marioeliminatesyopests.com</li>
+            <li>Email: SupaShrooma@shroomluva.com</li>
+            <li>Physical Address: 6969 West Mario Lane, Supatown, UT, 12178.</li>
+        </ul>
+    </footer>
 
 
     <script src="main.js"></script>
