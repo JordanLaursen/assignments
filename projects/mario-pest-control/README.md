@@ -1,0 +1,1 @@
+For this project I had not yet learned Flexbox so I had to create a website that incorporates JavaScript, HTML, and basic CSS in order to make a website that is interactive for a Mario pest control business.

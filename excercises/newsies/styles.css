@@ -10,6 +10,17 @@ h2 {
     text-align: center;
 }
 
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
 /**************************************/
 
 .hrSize {
@@ -37,4 +48,10 @@ h2 {
 
 .rightMarg {
     margin-right: 4%;
+}
+
+.classifiedsTitles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

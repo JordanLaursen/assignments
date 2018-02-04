@@ -52,6 +52,11 @@ article {
 
 }
 
+p {
+    font-family: 'Alike', sans-serif;
+    font-size: 19px;
+}
+
 .horizontalBar {
     width: 260%;
     border: 1px solid white;
