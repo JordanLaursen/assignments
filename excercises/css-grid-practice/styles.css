@@ -1,0 +1,40 @@
+
+
+
+
+.container {
+    display: grid;
+    height: 400px;
+    grid-gap: 3px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        ". . r r r r . ."
+        ". . b b g g . ."
+        ". . b b p p . ."
+}
+
+.red {
+    grid-area: r;
+    background-color: red;
+}
+
+.purple {
+    grid-area: p;
+    background-color: purple;
+}
+
+.green {
+    grid-area: g;
+    background-color: green;
+}
+
+.blue {
+    grid-area: b;
+    background-color: blue;
+}
+
+/* .yellow {
+    grid-area: y;
+    background-color: yellow;
+} */

@@ -1,0 +1,63 @@
+{
+    "appetizers": [
+        {
+            "name": "onion rings",
+            "ingredients": ["onion", "deep-fry batter"],
+            "description": "delicious deep fried onion slices"
+        },
+        {
+            "name": "potato soup",
+            "ingredients": ["potato", "mushrooms"],
+            "description": "a delicious potato and mushroom soup"
+        }
+    ],
+
+    "cold sandwhiches": [
+        {
+            "name": "ham and cheese sandwhich",
+            "ingredients": ["bread", "ham", "cheese"],
+            "description": "a simplistic ham and cheese sandwhich"
+        },
+        {
+            "name": "peanut butter and jelly sandwhich",
+            "ingredients": ["bread", "peanut butter", "jelly"],
+            "description": "a simplistic peanut butter and jelly sandwhich"
+        }
+    ],
+    "hot sandwhiches": [
+        {
+            "name": "grilled ham and cheese",
+            "ingredients": ["bread", "ham", "cheese"],
+            "description": "hot ham and cheese melted together"
+        },
+        {
+            "name": "philly cheese steak",
+            "ingredients": ["bread", "steak", "cheese"],
+            "description": "best cheese steak around"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "cheesecake",
+            "ingredients": ["graham cracker", "cream cheese", "mascarpone"],
+            "description": ""
+        },
+        {
+            "name": "baklava",
+            "ingredients": ["nuts", "sugar", "cinnamon", "cloves", "butter", "dough"],
+            "description": ""
+        }
+    ],
+    "drinks": [
+        {
+            "name": "coca-cola",
+            "ingredients": ["sugar", "water", "artificial coloring"],
+            "description": ""
+        },
+        {
+            "name": "water",
+            "ingredients": ["water", "ice cubes"],
+            "description": ""
+        }
+    ]
+}

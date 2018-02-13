@@ -1,0 +1,26 @@
+
+
+
+
+{
+    "name": "Jordan",
+    "age": 19,
+    "hair-color": "Brown",
+    "shirt-logo": "Presidente"
+}
+
+
+[
+    {
+        "name": "Jordan"
+    },
+    {
+        "name": "Scott"
+    },
+    {
+        "name": "Harry"
+    },
+    {
+        "name": "Luke"
+    }
+]

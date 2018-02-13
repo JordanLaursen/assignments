@@ -3,28 +3,39 @@ var readline = require("readline-sync");
 var hasKey = false;
 var gameOver = false;
 
-var initialize = readline.question("Welcome to the game. You are stuck. Find a way out. Press Enter:");
+var initialize = readline.question("Welcome to the game. You are stuck in a game. Press enter");
 
 var options = ["Put hand in hole", "Find the key", "Open the door"];
+var consequences = [
+    "You died a instant, painful death from getting stung by Mario",
+    "you found the key",
+    "You escaped from Mario! Be free little one!"
+]
 
-while(!gameOver) {
-    var selection = readline.keyInSelect("Select Option: ");
-    console.log(otions[selection]);
-    if(selection === 0) {
-        console.log("You lost your hand and a dog gave you a bad infection eating your hand")
+function checkForKey(hasKey){
+    if(hasKey){
+        console.log(consequences[selection]);
         gameOver = true;
         break;
-    } else if(selection === 1) {
-        console.log("You found a key inside of a dead rat!");
+    } else {
+        console.log("This door is locked. I dare you to stick your hand in the hole");
+    }
+}
+
+while(!gameOver){
+    var selection = readline.keyInSelect(options, "Selection option: ");
+    if(selection === 0){
+        console.log(consequences[selection]);
+        gameOver = true;
+        break;
+    } else if (selection === 1){
+        console.log(consequences[selection]);
         hasKey = true;
-    } else if (selection === 2) {
-        if(hasKey) {
-            console.log("You opened the door and can escape.");
-            break;
-        } else {
-            console.log("The door is locked maybe the key is in the hole?");
-        }
+    } else if (selection === 2){
+        checkForKey(hasKey);
     } else {
         break;
     }
 }
+
+console.log("Game over");
