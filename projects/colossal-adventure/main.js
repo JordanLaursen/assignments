@@ -4,10 +4,20 @@ var ask = require("readline-sync");
 var monsterNames = ["Wolf", "Man Bear Pig", "Demon"];
 var fightSelection = ["Attack", "Run", "Use item"];
 var inventory = [];
+var lastItem = inventory[inventory.length - 1];
 var enemies = [];
 
+function removeItem(array, element) {
+    const index = array.indexOf(element);
+
+    if (index !== -1) {
+        array.splice(index, 1);
+    }
+}
+
+
 function chanceOfInventory() {
-    randomNumbers = Math.floor(Math.random() * 4);
+    randomNumbers = Math.floor(Math.random() * 3);
     if (randomNumbers === 0) {
         inventory.push("potion");
     } else if (randomNumbers === 1) {
@@ -54,11 +64,13 @@ function fight() {
         if (chancesOfinstaDeath === 0) {
             console.log("CRITICAL HIT!!!!");
             currentCharacter.health += -63;
+            console.log(currentCharacter.health);
+            fight();
         } else if (fightingEnemy.health > 0 && currentCharacter.health > 0) {
             //make attack
             // console.log("i am attacking");
-            fightingEnemy.health += -currentCharacter.attack;
-            console.log("\n You attack the enemy and hit them for " + currentCharacter.attack + " damage, enemy health is now " + fightingEnemy.health + "\n");
+            fightingEnemy.health += -currentCharacter.attack();
+            console.log("\n You attack the enemy and hit them for " + currentCharacter.attack() + " damage, enemy health is now " + fightingEnemy.health + "\n");
             currentCharacter.health += -fightingEnemy.hitPoints;
             console.log("The enemy attacked you back and hit you for " + fightingEnemy.hitPoints + " damage");
             console.log("Your health is " + currentCharacter.health);
@@ -78,64 +90,81 @@ function fight() {
         var whatInventory = ask.keyInSelect(inventory, "Select an item to use");
         var index = inventory.indexOf(whatInventory);
         if (whatInventory === inventory.indexOf("potion")) {
-            return currentCharacter.health += 18;
-            console.log(currentCharacter.health);
-            inventory.splice(index, 1);
-            // whatToDo = 0;
+            currentCharacter.health += 18;
+            console.log("You used a potion and your health is up to: " + currentCharacter.health + " hp");
+            inventory.splice(inventory.lastIndexOf("potion"), 1);
             fight();
         } else if (whatInventory === inventory.indexOf("knife")) {
-            return currentCharacter.attack += 5;
-            console.log(currentCharacter.attack);
-            inventory.splice(index, 1);
-            // whatToDo = 0;
+            baseDamage += 5;
+            console.log("You swallowed a knife you crazy Mofo, your base hit damage is up to: " + baseDamage + " hp");
+            inventory.splice(inventory.lastIndexOf("knife"), 1);
             fight();
         } else if (whatInventory === inventory.indexOf("med pack")) {
-            return currentCharacter.health += 40;
-            console.log(currentCharacter.health);
-            inventory.splice(index, 1);
-            // whatToDo = 0;
+            currentCharacter.health += 40;
+            console.log("You used a med pack and your health is up to: " + currentCharacter.health + " hp");
+            inventory.splice(inventory.lastIndexOf("med pack"), 1);
+            fight();
+        } else if (inventory === undefined) {
+            console.log(`You have nothing in your inventory`);
             fight();
         }
     }
 }
 
+var baseDamage = 30;
 
 var characterClass = [{
         name: "Orc",
-        health: 150,
-        attack: 20
+        health: 450,
+        attack: function() {
+            return Math.floor(Math.random() * 21) + baseDamage;
+        }
     },
     {
         name: "Warrior",
-        health: 120,
-        attack: 20
+        health: 320,
+        //attack 25-35
+        attack: function() {
+            return Math.floor(Math.random() * 16) + baseDamage;
+        }
     },
     {
         name: "Wizard",
-        health: 100,
-        attack: 30
+        health: 300,
+        //attack 30-47
+        attack: function() {
+            return Math.floor(Math.random() * 18) + baseDamage;
+        }
     },
     {
         name: "Rogue",
-        health: 80,
-        attack: 25
+        health: 280,
+        //attack 30-45
+        attack: function() {
+            return Math.floor(Math.random() * 16) + baseDamage;
+        }
     },
     {
         name: "Barbarian",
-        health: 140,
-        attack: 20
+        health: 240,
+        attack: function() {
+            return Math.floor(Math.random() * 41) + baseDamage;
+        }
     }
 ];
-var currentCharacter;
+// var currentCharacter;
 var chooseCharacter = [];
 for (var i = 0; i < characterClass.length; i++) {
-    currentCharacter = characterClass[i];
+    // currentCharacter = characterClass[i];
     chooseCharacter.push(characterClass[i].name);
 }
+
+
 
 var playerName = ask.question("What is your name? ");
 var playerCharacter = ask.keyInSelect(chooseCharacter, "What Character would you like to play as? ")
 var spacesMoved = 0;
+var currentCharacter = characterClass[playerCharacter]
 console.log("Hello " + playerName + " the " + chooseCharacter[playerCharacter]);
 var fightingEnemy;
 
@@ -149,7 +178,7 @@ function startGame() {
         fight();
         chanceOfInventory();
         currentCharacter.health += 5;
-        console.log(`You have earned 5 health and have earned a ${inventory[inventory.length -1]}`);
+        console.log(`You have earned 5 health and have earned a ${inventory.slice(-1)[0]}`);
         startGame();
     } else if (currentCharacter.health <= 0) {
         console.log(`good game but you're dead`);
@@ -161,7 +190,7 @@ function startGame() {
         } else if (shouldWalk === "quit") {
             console.log("Good job on your game!");
         } else if (shouldWalk === "print") {
-            console.log(currentCharacter);
+            console.log(playerName + " the " + currentCharacter.name + ", health: " + currentCharacter.health + ", base damage: " + baseDamage);
             console.log(inventory);
             startGame();
         } else {
@@ -170,6 +199,7 @@ function startGame() {
         }
     }
 }
+
 startGame();
 
 
