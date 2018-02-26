@@ -1,0 +1,28 @@
+
+
+
+
+/* .stylings {
+    display: inline-block;
+    width: 300px;
+    margin-left: 20px;
+    padding: 1px;
+    border: 5px solid black;
+    background-color: slategrey;
+    border-radius: 15px;
+} */
+
+.travelBlocks {
+    border: 5px solid black;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.whole {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -5,5 +5,129 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    background-color: 
+    align-items: center;
+    background-color: #E4002C;
+    color: white;
+    height: 100px;
+    font-family: 'Playball', cursive;
+    font-size: 2rem;
+}
+
+
+.yankeesLogo {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+
+Body {
+    background-color: #162546;
+    background-image: url('https://s3.amazonaws.com/freebiesupply/large/2x/new-york-yankees-ny-logo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 60%;
+    /* <img className="yankeesLogo" src="https://s3.amazonaws.com/freebiesupply/large/2x/new-york-yankees-logo-transparent.png" alt="a simple yankees logo"/> */
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E4002C;
+    color: white;
+    height: 100px;
+    font-family: 'Playball', cursive;
+    font-size: 2rem;
+    /* margin-top: 500px; */
+}
+
+.mainContent {
+    background-color: rgba(22,37,70,0.85);
+    padding: 10px;
+    border-radius: 15px;
+    text-shadow: 2px 2px #162546;
+    color: white;
+    width: 75%;
+    column-count: 2;
+    text-align: center;
+    /* margin-top: 700px; */
+}
+
+.mainContentDiv {
+    display: flex;
+    justify-content: center;
+
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 25px;
+}
+
+
+@media (max-width: 800px) {
+    .mainContent {
+        background-color: rgba(22,37,70,0.85);
+        padding: 10px;
+        border-radius: 15px;
+        text-shadow: 2px 2px #162546;
+        color: white;
+        width: 85%;
+        text-align: center;
+        font-size: 1.3rem;
+        column-count: 1;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #E4002C;
+        color: white;
+        height: 100px;
+        font-family: 'Playball', cursive;
+        font-size: 1.2rem;
+    }
+
+    .yankeesLogo {
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        margin-left: 15%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #E4002C;
+        color: white;
+        height: 100px;
+        font-family: 'Playball', cursive;
+        font-size: 1.2rem;
+    }
+
+    .mainContent {
+        background-color: rgba(22,37,70,0.85);
+        padding: 10px;
+        border-radius: 15px;
+        text-shadow: 2px 2px #162546;
+        color: white;
+        width: 85%;
+        text-align: center;
+        font-size: 1rem;
+        column-count: 1;
+    }
 }
