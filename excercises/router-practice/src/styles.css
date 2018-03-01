@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: brown;
+    height: 50px;
+    align-items: center;
+    color: white;
+}
+
+Link {
+    color: white;
+
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,44 @@
+
+
+
+.formDivs {
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+
+input {
+    width: 400px;
+    margin-top: 50px;
+    height: 25px;
+}
+
+button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+form {
+    border: 5px solid black;
+    width: 1200px;
+}
+
+textarea {
+    margin-top: 50px;
+}
+
+.centerForm {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutYou {
+    display: flex;
+    justify-content: center;
+}
+.aboutYourself {
+    width: 940px;
+    height: 180px;
+    text-align: justify;
+}
