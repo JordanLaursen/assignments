@@ -1,0 +1,24 @@
+
+
+.navDiv{
+
+    height: 400px;
+    /* background: no-repeat center center; */
+}
+
+li {
+    list-style: none;
+    margin-right: 38px;
+    font-size: 18px;
+    color: white;
+}
+
+.headNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.headerClass {
+    background-image: url("https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg");
+}

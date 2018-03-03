@@ -4,17 +4,23 @@ class Form extends Component {
     constructor() {
         super();
         this.state = {
-            name: ""
+            name: "",
+            names: []
         }
+
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleSubmit(e){
         e.preventDefault();
-        this.setState({
-            name: ""
-        })
+        this.setState( prevState => {
+            return{
+                names: [...prevState.names, prevState.name],
+                name: ""
+            }
+        });
     }
 
     handleChange(e){
@@ -22,17 +28,22 @@ class Form extends Component {
     }
 
     render() {
+        let mappedNames = this.state.names.map(function(name) {
+            return <li>{name}</li>
+        })
         return (
-            <form>
-                What is your name?:
-                <input
-                    onChange={this.handleChange}
-                    value={this.state.name}
-                    name="name"
-                />
-                <button>submit</button>
-                <h1>{this.state.name}</h1>
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    What is your name? :
+                    <input
+                        onChange={this.handleChange}
+                        value={this.state.name}
+                        name="name"
+                    />
+                    <button onSubmit={this.handleSubmit}>Submit</button>
+                </form>
+                <ul>{mappedNames}</ul>
+            </div>
         )
     }
 }

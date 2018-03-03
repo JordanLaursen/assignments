@@ -1,0 +1,26 @@
+
+
+
+
+li {
+    list-style: none;
+    background-color: #ce4242;
+    color: white;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #595959;
+    height: 100px;
+}
+
+.navList {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: #392382; */
+}
