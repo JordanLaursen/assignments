@@ -7,7 +7,7 @@ const morgan = require("morgan");
 app.use(bodyParser.json());
 app.use(morgan("dev"))
 
-
+app.connect()
 
 app.listen(8001, () => {
     console.log("Hello");
