@@ -1,0 +1,19 @@
+
+
+
+
+li {
+    display: flex;
+    justify-content: flex-end;
+    background-color: brown;
+    list-style: none;
+    height: 75px;
+    width: 200px;
+    margin-top: 5px;
+}
+
+.listings {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
