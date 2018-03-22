@@ -1,7 +1,9 @@
 import {createStore} from "redux";
 
 initialState = {
-
+    gamertag: "",
+    game: "",
+    console: ""
 }
 
 const reducer = (state = initialState, action) => {
