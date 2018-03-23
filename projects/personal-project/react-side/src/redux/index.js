@@ -1,17 +1,29 @@
 import {createStore} from "redux";
 
-initialState = {
+const initialState = {
     gamertag: "",
     game: "",
-    console: ""
+    console: "",
+    users: []
+}
+
+const addUser = () => {
+    return{
+        type: "ADD_USER"
+    }
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case expression:
+        case "ADD_USER":
+            return {
+                ...state.users,
 
-            break;
+            }
         default:
+            return {
+                state
+            }
 
     }
 }

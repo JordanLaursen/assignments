@@ -14,7 +14,7 @@ mongoose.connect("mongodb://localhost/playerfinder", (err) => {
     console.log("Connected to the database");
 });
 
-app.use("/articles", require("./routes/"));
+app.use("/find-players", require("./routing"));
 
 app.listen(port, () => {
     console.log(`We've got er runnin on port ${port}`);
