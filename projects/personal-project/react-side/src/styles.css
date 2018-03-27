@@ -2,11 +2,22 @@
 
 body {
     height: 2000px;
+    background-color: #0b0c10;
 }
 
 
 li {
     list-style: none;
+}
+
+.addPlayer > h1 {
+    color: white;
+}
+
+.playerListDiv {
+    background-color: #1CCAD8;
+    border: 2px solid white;
+    margin-top: 5px;
 }
 
 .marginAdd {
@@ -33,7 +44,8 @@ li {
 
 .addPlayer {
     margin-top: 100px;
-    background-color: green;
+    background-color: #1f2833;
+    border: 2px solid white;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -49,7 +61,8 @@ li {
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: #2F97C1;
+    background-color: #1f2833;
+    border-bottom: 2px solid white;
 }
 
 .navUl {
@@ -62,7 +75,7 @@ li {
     padding: 5px;
     background-color: #1CCAD8;
     color: black;
-    border: .5px solid black;
+    border: 2px solid white;
     border-radius: 4px;
 }
 
@@ -75,5 +88,6 @@ li {
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: #2F97C1;
+    background-color: #1f2833;
+    border-top: 2px solid white;
 }

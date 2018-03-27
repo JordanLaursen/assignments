@@ -5,12 +5,12 @@ const userSchema = new Schema({
     gamertag: {
         type: String,
         required: true,
-        uppercase: true,
         unique: true
     },
     games: [{
         type: String,
-        required: true
+        required: true,
+        uppercase: true
     }],
     console: {
         type: String,
