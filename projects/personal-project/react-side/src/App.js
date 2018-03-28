@@ -3,8 +3,6 @@ import Navbar from "./general/Navbar";
 import Footer from "./general/Footer";
 import AddPlayer from "./AddPlayer";
 import PlayerList from "./PlayerList";
-// import {connect} from "react-redux";
-// import {getUsers} from "./redux";
 import {Switch, Route} from "react-router-dom";
 import axios from "axios";
 
@@ -15,6 +13,8 @@ class App extends Component {
             gamertag: "",
             games: "",
             console: "",
+            searchGame: "",
+            searchTrue: false,
             xboxTrue: false,
             playstationTrue: false,
             pcTrue: false,
@@ -28,6 +28,7 @@ class App extends Component {
         this.handlePlaystation = this.handlePlaystation.bind(this);
         this.handlePC = this.handlePC.bind(this);
         this.handleAllUsers = this.handleAllUsers.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     handleDelete(id){
@@ -39,6 +40,21 @@ class App extends Component {
                 users: leftExistingUsers
             });
         })
+    }
+
+    handleSearch(e) {
+        e.preventDefault();
+        const differentUsers = this.state.users.filter(user => {
+            console.log(user.games);
+            return (user.games.toString() === this.state.searchGame);
+        });
+        console.log(`${this.state.searchGame} hello`)
+        console.log()
+        this.setState({
+            searchTrue: true,
+            specificUsers: differentUsers
+        });
+
     }
 
     handleChange(e) {
@@ -89,6 +105,7 @@ class App extends Component {
             xboxTrue: false,
             playstationTrue: false,
             pcTrue: false,
+            searchTrue: false
         })
     }
 
@@ -118,30 +135,13 @@ class App extends Component {
         })
     }
 
-    // componentDidMount() {
-    //     this.props.getUsers().then(() => {
-    //         this.setState({
-    //             users: this.props.users
-    //         })
-    //     })
-    // }
-    // if (play === xbox && play === pc && xbox === pc){
-    //     show all
-    // }else {
-    //     if (play){
-    //         users.filter(user => user.console === playstation)
-    //         users.map()
-    //     }else if(xbox){
-    //         users.filter
-    //     }
-    // }
-
     render() {
+
         let mappedUsers;
-        !(this.state.xboxTrue || this.state.playstationTrue || this.state.pcTrue)? mappedUsers = this.state.users.map(user => {
-            return <PlayerList gamertag={user.gamertag} games={user.games} console={user.console} id={user._id} key={user._id} handleDelete={this.handleDelete}/>
+        !(this.state.xboxTrue || this.state.playstationTrue || this.state.pcTrue || this.state.searchTrue)? mappedUsers = this.state.users.map(user => {
+            return <PlayerList gamertag={user.gamertag} games={user.games} console={user.console} id={user._id} key={user._id} handleDelete={this.handleDelete} />
         }): mappedUsers = this.state.specificUsers.map(user => {
-            return <PlayerList gamertag={user.gamertag} games={user.games} console={user.console} id={user._id} key={user._id} handleDelete={this.handleDelete}/>
+            return <PlayerList gamertag={user.gamertag} games={user.games} console={user.console} id={user._id} key={user._id} handleDelete={this.handleDelete} />
         })
         return (
 
@@ -152,6 +152,9 @@ class App extends Component {
                 handlePC={this.handlePC}
                 handlePlaystation={this.handlePlaystation}
                 handleAllUsers={this.handleAllUsers}
+                handleSearch={this.handleSearch}
+                handleChange={this.handleChange}
+                searchGame={this.state.searchGame}
                 />
 
                 <AddPlayer
@@ -168,11 +171,3 @@ class App extends Component {
 }
 
 export default App;
-
-// const mapStateToProps = (state) => {
-//     return{
-//         users: state.users
-//     }
-// }
-
-// export default connect(mapStateToProps, {getUsers})(App);
