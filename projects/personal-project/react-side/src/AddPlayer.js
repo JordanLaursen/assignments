@@ -3,7 +3,7 @@ import React from "react";
 const AddPlayer = (props) => {
     return(
         <div className="addPlayer">
-            <h1>Add your Profile</h1>
+            <h2>Add your Profile</h2>
             <form onSubmit={props.handleNewUser}>
                 <select name="console" onChange={props.handleChange}>
                     <option>Select a Console</option>

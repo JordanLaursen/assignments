@@ -1,41 +1,41 @@
 const express = require("express");
 const playerRoutes = express.Router();
-const User = require("./index");
+const Game = require("./models/users");
 
 playerRoutes.get("/", (req, res) => {
-    User.find((err, articles) => {
+    Game.find((err, gamers) => {
         if (err) res.status(500);
-        return res.send(articles)
+        return res.send(gamers)
     });
 });
 
 playerRoutes.get("/:id", (req, res) => {
-    User.findById(req.params.id, (err, article) => {
+    Game.findById(req.params.id, (err, gamer) => {
         if (err) return res.status(500).send(err);
-        return res.send(article);
+        return res.send(gamer);
     });
 });
 
 playerRoutes.post("/", (req, res) => {
-    const newUser = new User(req.body);
-    newUser.vote = 0;
-    newUser.save(err => {
+    const newGame = new Game(req.body);
+    newGame.vote = 0;
+    newGame.save(err => {
         if (err) return res.status(500).send(err);
-        return res.status(201).send(newUser);
+        return res.status(201).send(newGame);
     });
 });
 
 playerRoutes.put("/:id", (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser) => {
+    Game.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedGame) => {
         if (err) return res.status(500).send(err);
-        res.send(updatedUser);
+        res.send(updatedGame);
     });
 });
 
 playerRoutes.delete("/:id", (req, res) => {
-    User.findByIdAndRemove(req.params.id, (err, removedUser) => {
+    Game.findByIdAndRemove(req.params.id, (err, removedGame) => {
         if (err) return res.status(500).send(err);
-        return res.status(202).send(removedUser);
+        return res.status(202).send(removedGame);
     });
 });
 

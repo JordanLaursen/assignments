@@ -131,7 +131,7 @@ class App extends Component {
             this.setState({
                 users: response.data
             })
-            console.log(this.state.users);
+            console.log(response.data);
         })
     }
 

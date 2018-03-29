@@ -5,16 +5,20 @@ const userSchema = new Schema({
     gamertag: {
         type: String,
         required: true,
+        tolowercase: true,
         unique: true
     },
     games: [{
-        type: String,
-        required: true,
-        uppercase: true
+        type: Schema.Types.ObjectId,
+        ref: "Game"
     }],
-    console: {
+    password: {
         type: String,
         required: true
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 });
 
